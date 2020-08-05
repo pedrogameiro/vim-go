@@ -124,4 +124,7 @@ command! -nargs=* -bang GoDiagnostics call go#lint#Diagnostics(<bang>0, <f-args>
 " -- term
 command! GoToggleTermCloseOnExit call go#term#ToggleCloseOnExit()
 
+" -- impl
+command! -nargs=* -complete=customlist,go#goMock#Complete GoMock call go#gomock#GoMock(<f-args>)
+
 " vim: sw=2 ts=2 et

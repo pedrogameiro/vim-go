@@ -774,6 +774,17 @@ CTRL-t
 >
       :GoImpl f *Foo io.Writer
       :GoImpl t Type io.ReadWriteCloser
+
+                                                                     *:GoImpl*
+:GoImpl [package] [interface]
+
+    Generates a mock implementation of a particular interface. This is
+    mostly usefull in the development of tests, where it may be necessary to
+    mock away a project dependecy.
+    Example usages:
+>
+      :GoMock hash Hash
+      :GoMock golang.org/x/tools/godoc/analysis Link 
 <
                                                                   *:GoAddTags*
 :[range]GoAddTags [key],[option] [key1],[option] ...
